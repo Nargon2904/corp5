@@ -1,3 +1,4 @@
+import 'package:corp5/components/menu.dart';
 import 'package:corp5/models/user.dart';
 import 'package:corp5/pages/profile_page.dart';
 import 'package:flutter/material.dart';
@@ -5,6 +6,8 @@ import 'package:flutter/material.dart';
 
 class AuthPage extends StatelessWidget {
   const AuthPage({super.key});
+  
+  final int selectedIndex = 3;
 
   @override
   Widget build(BuildContext context) {
@@ -62,7 +65,8 @@ class AuthPage extends StatelessWidget {
             ],
           ),
         )
-      )
+      ),
+      bottomNavigationBar: NavMenu(selectedIndex: selectedIndex),
     );
   }
 }

@@ -6,8 +6,10 @@ class Listing {
   final String publishDate;
   final List<String> img;
   bool isfavor;
+  bool iscart;
 
-  Listing(this.id, this.title, this.price, this.description, this.publishDate, this.img, this.isfavor);
+
+  Listing(this.id, this.title, this.price, this.description, this.publishDate, this.img, this.isfavor, this.iscart);
 }
 
 List<Listing> listings = [
@@ -18,7 +20,8 @@ List<Listing> listings = [
     "Формат: 12' \nLP Жанр: shoegaze, dream pop \nSide A:\n1 Всё, что я хочу тебе сказать\n2 Никогда\n3 Утро солнечного дня\nSide B:\n1 Перестаю дышать\n2 Потерялась\n3 Японская\n4 Котёнок",
     "2024-05-27",
     ["kits"],
-    false
+    false,
+    false,
   ),
   Listing(
     2,
@@ -27,7 +30,8 @@ List<Listing> listings = [
     "Формат: 12' \nLP Жанр: rap \nSide A:\n 1 Всё, что я хочу тебе сказать\n2 Никогда\n3 Утро солнечного дня\nSide B:\n1 Перестаю дышать\n2 Потерялась\n3 Японская\n4 Котёнок",
     "2022-01-27",
     ["petar"],
-    false
+    false,
+    false,
   ),
   Listing(
     3,
@@ -36,8 +40,10 @@ List<Listing> listings = [
     "Формат: 10' \nLP Жанр: electronic, ambient \nSide A:\n1 Всё, что я хочу тебе сказать\n2 Никогда\n3 Утро солнечного дня\nSide B:\n1 Перестаю дышать\n2 Потерялась\n3 Японская\n4 Котёнок",
     "2024-05-27",
     ["bruno"],
-    false
+    false,
+    false,
   ),
 ];
 
 List<Listing> favorListings = [];
+List<Listing> cartListings = [];

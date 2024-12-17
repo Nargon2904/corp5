@@ -1,3 +1,4 @@
+import 'package:corp5/pages/cart_page.dart';
 import 'package:corp5/pages/favorites_page.dart';
 import 'package:corp5/pages/home_page.dart';
 import 'package:corp5/pages/profile_page.dart';
@@ -30,6 +31,12 @@ class NavMenuState extends State<NavMenu> {
         );
       }
       else if (index == 2){
+        Navigator.push(
+            context,
+            MaterialPageRoute(builder: (context) => const CartPage()),
+        );
+      }
+      else if (index == 3){
         if (currentUser.id == 0){
           Navigator.push(
               context,
@@ -58,11 +65,17 @@ class NavMenuState extends State<NavMenu> {
             label: 'Избранное',
           ),
           BottomNavigationBarItem(
+            icon: Icon(Icons.shopping_cart),
+            label: 'Корзина',
+          ),
+          BottomNavigationBarItem(
             icon: Icon(Icons.person),
             label: 'Профиль',
           ),
         ],
+        unselectedItemColor: Colors.grey,
         currentIndex: widget.selectedIndex,
+        backgroundColor: const Color.fromARGB(255, 200, 200, 200),
         selectedItemColor: const Color.fromARGB(255, 96, 160, 195),
         onTap: _onItemTapped,
       );
