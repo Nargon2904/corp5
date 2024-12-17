@@ -1,4 +1,4 @@
-# Практическая №4 ПКС
+# Практическая №5 ПКС
 ## Логинов Антон Максимович ЭФБО-01-22
 
 ![alt text](assets/images/image5-1.png)
@@ -9,4 +9,3 @@
 
 ![alt text](assets/images/image5-4.png)
 
-![alt text](assets/images/image5-5.png)
