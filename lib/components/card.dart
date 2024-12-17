@@ -73,7 +73,7 @@ class ItemListState extends State<ItemList> {
                           });
                         }, 
                         icon: widget.listing.isfavor ? 
-                          const Icon(Icons.favorite, color: Color.fromARGB(255, 96, 160, 195)) : 
+                          const Icon(Icons.favorite, color: Color.fromARGB(255, 255, 0, 0)) : 
                           const Icon(Icons.favorite_border_outlined) 
                         ),
                         IconButton(onPressed: () {
@@ -87,7 +87,7 @@ class ItemListState extends State<ItemList> {
                           });
                         }, 
                         icon: widget.listing.iscart ? 
-                          const Icon(Icons.shopping_cart, color: Color.fromARGB(255, 183, 108, 51)) : 
+                          const Icon(Icons.shopping_cart, color: Color.fromARGB(255, 96, 160, 195)) : 
                           const Icon(Icons.shopping_cart_outlined) 
                         )
                       ],

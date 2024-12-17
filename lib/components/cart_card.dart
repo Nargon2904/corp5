@@ -69,21 +69,7 @@ class CartCardState extends State<CartCard> {
                             color: Color.fromARGB(255, 55, 55, 55),
                           ),
                         ),
-                        const SizedBox(width: 100,),
-                        IconButton(onPressed: () {
-                          setState(() {
-                            if (widget.listing.iscart) {
-                              cartListings.remove(widget.listing);
-                            } else {
-                              cartListings.add(widget.listing);
-                            }
-                            widget.listing.iscart = !widget.listing.iscart;
-                          });
-                        }, 
-                        icon: widget.listing.iscart ? 
-                          const Icon(Icons.shopping_cart, color: Color.fromARGB(255, 183, 108, 51)) : 
-                          const Icon(Icons.shopping_cart_outlined) 
-                        ),
+                        const SizedBox(width: 50,),
                         IconButton(onPressed: () {
                           setState(() {
                             if (widget.listing.isfavor) {
@@ -95,9 +81,24 @@ class CartCardState extends State<CartCard> {
                           });
                         }, 
                         icon: widget.listing.isfavor ? 
-                          const Icon(Icons.favorite, color: Color.fromARGB(255, 183, 108, 51)) : 
+                          const Icon(Icons.favorite, color: Color.fromARGB(255, 255, 0, 0)) : 
                           const Icon(Icons.favorite_border_outlined) 
-                        )
+                        ),
+                        IconButton(onPressed: () {
+                          setState(() {
+                            if (widget.listing.iscart) {
+                              cartListings.remove(widget.listing);
+                            } else {
+                              cartListings.add(widget.listing);
+                            }
+                            widget.listing.iscart = !widget.listing.iscart;
+                          });
+                        }, 
+                        icon: widget.listing.iscart ? 
+                          const Icon(Icons.shopping_cart, color: Color.fromARGB(255, 96, 160, 195)) : 
+                          const Icon(Icons.shopping_cart_outlined) 
+                        ),
+
                       ],
                     ),
                     const SizedBox(height: 10),
