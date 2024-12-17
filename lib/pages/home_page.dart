@@ -1,4 +1,5 @@
 import 'package:corp5/components/card.dart';
+import 'package:corp5/components/menu.dart';
 import 'package:corp5/pages/newrec_page.dart';
 import 'package:flutter/material.dart';
 import '../models/rec_list.dart';
@@ -10,6 +11,7 @@ class HomePage extends StatefulWidget {
 }
 
 class HomePageState extends State<HomePage> {
+  int selectedIndex = 0;
   @override
   Widget build(BuildContext context) {
     return Scaffold(
@@ -44,6 +46,7 @@ class HomePageState extends State<HomePage> {
         tooltip: 'Add new record',
         child: const Icon(Icons.add),
       ),
+      bottomNavigationBar: NavMenu(selectedIndex: selectedIndex),
     );
   }
 }

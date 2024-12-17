@@ -16,7 +16,7 @@ class NewRecPage extends StatelessWidget {
   
     return Scaffold(
       appBar: AppBar(
-        title: const Text('Добавить объявление'),
+        title: const Text('Добавить пластинку'),
       ),
       backgroundColor: Colors.white,
       body: SingleChildScrollView(
@@ -65,7 +65,7 @@ class NewRecPage extends StatelessWidget {
                         int.parse(priceController.text), 
                         descController.text, 
                         DateTime(DateTime.now().year, DateTime.now().month, DateTime.now().day).toString(), 
-                        ['none']);
+                        ['none'], false);
 
                         listings.add(newListing);
 

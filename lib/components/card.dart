@@ -1,4 +1,3 @@
-import 'package:corp5/pages/home_page.dart';
 import 'package:flutter/material.dart';
 import '../models/rec_list.dart';
 import '../pages/record_page.dart';
@@ -41,36 +40,44 @@ class ItemListState extends State<ItemList> {
               child: Column(
                 crossAxisAlignment: CrossAxisAlignment.start,
                 children: [
-                  Text(
-                    widget.listing.title,
-                    style: const TextStyle(
-                      fontSize: 20,
-                      fontWeight: FontWeight.bold,
-                    ),
-                  ),
-                  Center(
-                    child: TextButton(
-                      onPressed: () {
-                        for (var l in listings) {
-                          if (l == widget.listing) {
-                            listings.remove(l);
-                            Navigator.push(
-                              context,
-                              MaterialPageRoute(builder: (context) => const HomePage()),
-                            );
-                          }
-                        }
-                      },
-                      child: const Text(
-                        'Удалить',
-                        style: TextStyle(
-                        fontSize: 16,
+                  SizedBox(
+                    height: 80,
+                    child: Text(
+                      widget.listing.title,
+                      style: const TextStyle(
+                        fontSize: 20,
                         fontWeight: FontWeight.bold,
-                        color: Color.fromARGB(255, 100, 100, 100),
-                        ),
                       ),
                     ),
                   ),
+                  const SizedBox(height: 20,),
+                  Row(
+                      children: [
+                        Text(
+                          '${widget.listing.price}₽',
+                          style: const TextStyle(
+                            fontSize: 18,
+                            fontWeight: FontWeight.bold,
+                            color: Color.fromARGB(255, 97, 97, 97),
+                          ),
+                        ),
+                        const SizedBox(width: 90,),
+                        IconButton(onPressed: () {
+                          setState(() {
+                            if (widget.listing.isfavor) {
+                              favorListings.remove(widget.listing);
+                            } else {
+                              favorListings.add(widget.listing);
+                            }
+                            widget.listing.isfavor = !widget.listing.isfavor;
+                          });
+                        }, 
+                        icon: widget.listing.isfavor ? 
+                          const Icon(Icons.favorite, color: Color.fromARGB(255, 96, 160, 195)) : 
+                          const Icon(Icons.favorite_border_outlined) 
+                        )
+                      ],
+                    ),
                 ],
               ),
             ),
