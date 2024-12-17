@@ -29,7 +29,7 @@ class HomePageState extends State<FavoritesPage> {
         child: GridView.builder(
           gridDelegate: const SliverGridDelegateWithFixedCrossAxisCount(
             crossAxisCount: 2,
-            childAspectRatio: 1.45 / 2,
+            childAspectRatio: 1.45 / 2.5,
             mainAxisSpacing: 2,
           ),
           itemCount: favorListings.length,
