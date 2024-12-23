@@ -43,6 +43,16 @@ List<Listing> listings = [
     false,
     false,
   ),
+  Listing(
+    4,
+    "Bird Bone - Лейтмотив",
+    3500,
+    "Формат: 10' \nLP Жанр: emo \nSide A:\n1 Всё, что я хочу тебе сказать\n2 Никогда\n3 Утро солнечного дня\nSide B:\n1 Перестаю дышать\n2 Потерялась\n3 Японская\n4 Котёнок",
+    "2024-09-22",
+    ["birdbone"],
+    false,
+    false,
+  ),
 ];
 
 List<Listing> favorListings = [];
